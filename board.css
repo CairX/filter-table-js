@@ -1,0 +1,41 @@
+html, input, select, textarea {
+	font: 16px/1 sans-serif;
+}
+
+html {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	padding: 0 1rem;
+	margin: 0;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+.hide {
+	color: grey;
+	background: lightgrey;
+	display: none;
+}
+
+.filters {}
+
+.board {
+	border-collapse: collapse;
+	width: 100%;
+}
+.board th {
+	color: #666;
+	font-weight: normal;
+	text-align: left;
+	padding: 0.5rem 0.5rem;
+}
+.board td {
+	background: white;
+	border: 1px solid #ccc;
+	padding: 1rem 0.5rem;
+}
