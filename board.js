@@ -1,25 +1,6 @@
+/* global ClassName */
+
 "use strict";
-
-function appendClassName(element, className) {
-	element.className = element.className.trim() + " " + className.trim();
-}
-
-function uniqueClassName(element, className) {
-	if (!hasClassName(element, className)) {
-		appendClassName(element, className);
-	}
-}
-
-function removeClassName(element, className) {
-	var classes = element.className.trim().split(" ");
-	classes.splice(classes.indexOf(className), 1);
-	element.className = classes.join(" ");
-}
-
-function hasClassName(element, className) {
-	var classes = element.className.trim().split(" ");
-	return contains(classes, className);
-}
 
 function filterUnique(element, index, array) {
 	return array.indexOf(element) == index;
@@ -56,9 +37,9 @@ function disableOthers(select, index) {
 	cells.forEach(function(element) {
 		console.log("Compare: " + element.innerText + " and " + values.indexOf(element.innerText));
 		if (contains(values, element.innerText)) {
-			removeClassName(element.parentNode, "hide");
+			ClassName.remove(element.parentNode, "hide");
 		} else {
-			uniqueClassName(element.parentNode, "hide");
+			ClassName.unique(element.parentNode, "hide");
 		}
 	});
 }
@@ -87,9 +68,9 @@ function updateBoard() {
 		});
 
 		if (show) {
-			removeClassName(row, "hide");
+			ClassName.remove(row, "hide");
 		} else {
-			uniqueClassName(row, "hide");
+			ClassName.unique(row, "hide");
 		}
 	});
 	
