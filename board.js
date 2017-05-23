@@ -1,4 +1,4 @@
-/* global ClassName */
+/* global ClassName, Select */
 
 "use strict";
 
@@ -82,10 +82,8 @@ var selects = [];
 
 var headers = board.querySelectorAll("thead th");
 headers.forEach(function(element, index) {
-	var header = document.createElement("div");
-	header.innerHTML = element.innerText;
-
 	var select = document.createElement("select");
+	select.setAttribute("placeholder", element.innerText);
 	select.setAttribute("onchange", "updateBoard();");
 	select.setAttribute("multiple", "multiple");
 
@@ -102,8 +100,8 @@ headers.forEach(function(element, index) {
 		select.appendChild(option);
 	});
 
-	filters.appendChild(header);
 	filters.appendChild(select);
+	Select.create(select);
 
 	selects.push(select);
 });
