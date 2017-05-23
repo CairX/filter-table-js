@@ -1,0 +1,22 @@
+.select-container {
+	display: inline-block;
+}
+.select-header {
+	background: white;
+	padding: 0.25rem;
+	border: 1px solid;
+	border-radius: 0.2rem;
+}
+.select-drop {
+	position: absolute;
+
+	background: white;
+	list-style: none;
+	padding: 0.25rem;
+	border: 1px solid;
+	border-radius: 0.2rem;
+	margin: 0;
+}
+.select-hide {
+	display: none;
+}
